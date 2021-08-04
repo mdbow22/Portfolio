@@ -1,5 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
 :root {
-    --offWhite: #F7FAEF;
+    --offWhite: rgba(247, 250, 239, 1);
     --fadedGreen: #AEC3B0;
-    --steelTeal: #5D8898;
+    --steelTeal: rgba(93, 136, 152, .9);
+    --richBlack: #01161E;
+}
+
+* {
+    font-family: "Atkinson Hyperlegible", sans-serif;
+}
+
+body {
+    background-color: var(--offWhite);
+}
+
+header {
+    margin: 0 auto;
+    width: 40%;
+}
+
+header h1 {
+    color: var(--offWhite);
+    font-size: 2.75em;
+    text-align: center;
+    padding-top: 40px;
+    padding: 40px 5px 10px 5px;
+    background-color: var(--steelTeal);
+    box-shadow: 0px 6px 6px rgba(1, 22, 30, 0.25);
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 1.5em;
+    line-height: 250%;
+}
+
+nav ul li {
+    font-weight: bold;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--steelTeal);
+    border-bottom: 5px solid var(--steelTeal);
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        width: 100%;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        box-shadow: 0px 3px 3px rgba(1, 22, 30, 0.1);
+        width: 100%;
+        text-align: center;
+    }
+    nav ul li a {
+        border-bottom: none;
+        display: block;
+    }
 }
