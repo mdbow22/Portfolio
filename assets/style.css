@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Kanit:wght@400;700&display=swap');
 :root {
     --offWhite: rgba(247, 250, 239, 1);
     --fadedGreen: #AEC3B0;
@@ -15,11 +15,13 @@ body {
 }
 
 header {
-    margin: 0 auto;
-    width: 40%;
+    margin: 0 auto 20px auto;
+    width: 35%;
 }
 
 header h1 {
+    font-family: 'Kanit', sans-serif;
+    text-transform: uppercase;
     color: var(--offWhite);
     font-size: 2.75em;
     text-align: center;
@@ -47,7 +49,71 @@ nav ul li a {
     border-bottom: 5px solid var(--steelTeal);
 }
 
+main {
+    width: 80%;
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 25px;
+    font-family: 'Kanit', sans-serif;
+}
+
+#about {
+    visibility: hidden;
+}
+
+.aboutFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.aboutFlex img {
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+}
+
+.aboutFlex p {
+    flex-basis: 30ch;
+    flex-grow: 0;
+    padding-right: 20px;
+}
+
+article p {
+    font-size: 1.25em;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+footer h3 {
+    width: 35%;
+    color: var(--offWhite);
+    text-align: center;
+    padding-bottom: 40px;
+    padding: 0 5px;
+    line-height: 300%;
+    background-color: var(--steelTeal);
+    box-shadow: 0px 6px 6px rgba(1, 22, 30, 0.25);
+}
+
 @media screen and (max-width: 768px) {
+    h2 {
+        text-align: center;
+    }
     header {
         width: 100%;
     }
@@ -63,5 +129,10 @@ nav ul li a {
     nav ul li a {
         border-bottom: none;
         display: block;
+    }
+    .aboutFlex {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
     }
 }
