@@ -14,8 +14,8 @@ This is a small portfolio page that will be used to showcase the projects I have
 
 ### Desktop-Size Viewport
 
-![screenshot of desktop sized site](assets/images/screenshot.png)
+![screenshot of desktop sized site](/assets/images/screenshot.png)
 
 ### Mobile Viewport
 
-![screenshot of mobile sized site](assets/images/screenshotMobile.png)
+![screenshot of mobile sized site](/assets/images/screenshotMobile.png)
