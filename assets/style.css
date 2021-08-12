@@ -1,23 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Kanit:wght@400;700&display=swap');
 :root {
-    --offWhite: rgba(247, 250, 239, 1);
-    --fadedGreen: #AEC3B0;
-    --steelTeal: rgba(93, 136, 152, .9);
-    --richBlack: #01161E;
+    --light: #F1F1F1;
+    --fadedGreen: rgb(174, 195, 176);
+    --highlight: #5499A0;
+    --text: #182D39;
 }
 
 * {
     font-family: "Atkinson Hyperlegible", sans-serif;
-    color: var(--richBlack);
+    color: var(--text);
 }
 
 body {
-    background-color: var(--offWhite);
+    background-color: var(--light);
 }
 
 h1,
 h3 {
-    color: var(--offWhite);
+    color: var(--light);
 }
 
 
@@ -25,7 +25,7 @@ h3 {
 
 .container {
     display: grid;
-    gap: 50px 0;
+    gap: 100px 0;
     grid-template-columns: 1fr 3fr 1fr;
 }
 
@@ -45,8 +45,8 @@ footer {
 
 .projBkgrnd {
     grid-area: 3 / 2 / 4 / 4;
-    background-color: var(--steelTeal);
-    box-shadow: 0 5px 5px gray;
+    background-color: var(--highlight);
+    box-shadow: 0 5px 5px #CCCCCC;
     position: relative;
     z-index: -1;
 }
@@ -65,13 +65,12 @@ header h1 {
     width: 50%;
     font-family: 'Kanit', sans-serif;
     text-transform: uppercase;
-    color: var(--offWhite);
-    font-size: 2.75em;
+    font-size: 3em;
     text-align: center;
     padding-top: 40px;
     padding: 40px 5px 0px 5px;
-    background-color: var(--steelTeal);
-    box-shadow: 0px 6px 6px rgba(1, 22, 30, 0.25);
+    background-color: var(--highlight);
+    box-shadow: 0px 6px 10px #CCCCCC;
 }
 
 
@@ -95,8 +94,8 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: var(--steelTeal);
-    border-bottom: 5px solid var(--steelTeal);
+    color: var(--highlight);
+    border-bottom: 5px solid var(--highlight);
 }
 
 #about {
@@ -105,7 +104,7 @@ nav ul li a {
 
 h2 {
     font-family: 'Kanit', sans-serif;
-    font-size: 2em;
+    font-size: 2.5em;
     position: relative;
     left: 0;
     top: -1.2em;
@@ -122,12 +121,12 @@ article {
 
 article h3,
 .flexBox h3 {
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: bold;
 }
 
 .profileImg {
-    width: 300px;
+    width: 400px;
     height: inherit;
     border-radius: 50%;
 }
@@ -147,7 +146,7 @@ article p {
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 20px 20px;
-    color: var(--offWhite);
+    color: var(--light);
 }
 
 .card {
@@ -158,6 +157,7 @@ article p {
 .card img {
     width: 100%;
     aspect-ratio: 3 / 2;
+    box-shadow: 3px 5px 5px var(--text);
 }
 
 .card a:hover,
@@ -170,14 +170,14 @@ article p {
 /* Styles for Connect section */
 
 .connectBox {
+    width: 45%;
     display: flex;
     flex-direction: column-reverse;
-    flex-basis: 350px;
-    text-align: center;
+    align-items: center;
 }
 
 .connectBox h3 {
-    color: var(--richBlack);
+    color: var(--text);
 }
 
 .fa {
@@ -198,12 +198,12 @@ footer {
 
 footer h3 {
     width: 40%;
-    color: var(--offWhite);
+    color: var(--light);
     text-align: center;
     padding-bottom: 40px;
     padding: 0 5px;
     line-height: 300%;
-    background-color: var(--steelTeal);
+    background-color: var(--highlight);
     box-shadow: 0px 6px 6px rgba(1, 22, 30, 0.25);
 }
 
@@ -248,9 +248,9 @@ footer h3 {
         flex-basis: 100%;
     }
     .projects {
-        background-color: var(--steelTeal);
+        background-color: var(--highlight);
         box-shadow: 0 5px 5px gray;
-        color: var(--offWhite);
+        color: var(--light);
     }
     .flexBox {
         align-items: center;
