@@ -15,12 +15,50 @@ body {
     background-color: var(--offWhite);
 }
 
+
+/* Set up the grid to have a header 3 content boxes and a footer */
+
+.container {
+    display: grid;
+    gap: 50px 0;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+header,
+.about,
+.connect,
+footer {
+    grid-column: 2 / 3;
+}
+
+.projects {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+
+/* This creates an empty cell used to give the background effect */
+
+.projBkgrnd {
+    grid-area: 3 / 2 / 4 / 4;
+    background-color: var(--steelTeal);
+    box-shadow: 0 5px 5px gray;
+    position: relative;
+    z-index: -1;
+}
+
+
+/* Styles for Header */
+
 header {
-    margin: 0 auto 20px auto;
-    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 header h1 {
+    border: 2px solid black;
+    width: 50%;
     font-family: 'Kanit', sans-serif;
     text-transform: uppercase;
     color: var(--offWhite);
@@ -30,6 +68,13 @@ header h1 {
     padding: 40px 5px 0px 5px;
     background-color: var(--steelTeal);
     box-shadow: 0px 6px 6px rgba(1, 22, 30, 0.25);
+}
+
+
+/* Styles for Navigation Bar */
+
+nav {
+    width: 50%;
 }
 
 nav ul {
@@ -50,35 +95,29 @@ nav ul li a {
     border-bottom: 5px solid var(--steelTeal);
 }
 
-main {
-    width: 80%;
-    max-width: 992px;
-    margin: 0 auto;
-}
-
-h2 {
-    font-size: 2em;
-    margin-bottom: 25px;
-    font-family: 'Kanit', sans-serif;
-}
-
-section {
-    padding-top: 50px;
-}
-
 #about {
     visibility: hidden;
 }
 
-.article {
+h2 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 2em;
+    position: relative;
+    left: 0;
+    top: -1.2em;
+    margin-bottom: -1em;
+}
+
+article {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 85%;
     margin: 0 auto;
+    gap: 20px;
 }
 
-.article h3 {
+article h3 {
     font-size: 1.5em;
     font-weight: bold;
 }
@@ -89,50 +128,46 @@ section {
     border-radius: 150px;
 }
 
-.article p {
+article p {
     flex-basis: 30ch;
     flex-grow: 0;
     padding-right: 20px;
-}
-
-article p {
     font-size: 1.25em;
 }
 
-.projSection .article {
+
+/* FlexBox container for the grid of projects */
+
+.flexBox {
+    display: flex;
+    gap: 20px;
     flex-wrap: wrap;
-    background-color: var(--steelTeal);
-    box-shadow: 0px 6px 6px rgba(1, 22, 30, 0.25);
-    padding: 0 15px;
+    justify-content: space-between;
+    margin: 20px 20px;
 }
 
-.firstProj {
-    width: 100%;
+.card {
+    flex: 0 1 45%;
+    /* max-width: 350px; */
     text-align: center;
-    padding: 15px;
+    border: 1px solid black;
+    max-width: 400px;
+    color: var(--offWhite)
 }
 
-.projItem {
-    padding: 15px;
-    flex-basis: 350px;
-}
-
-.projSection h3 {
-    text-align: center;
-    padding-bottom: 5px;
-    color: var(--offWhite);
-}
-
-.projSection img {
+.card img {
     width: 100%;
     aspect-ratio: 3 / 2;
 }
 
-.projSection a:hover,
-.projSection a:focus,
-.projSection a:active {
+.card a:hover,
+.card a:focus,
+.card a:active {
     opacity: 0.7;
 }
+
+
+/* Styles for Connect section */
 
 .connectBox {
     display: flex;
@@ -145,16 +180,20 @@ article p {
     font-size: 6em;
 }
 
+
+/* Footer Styles */
+
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 50px;
     width: 100%;
+    margin-bottom: 0;
 }
 
 footer h3 {
-    width: 35%;
+    width: 40%;
     color: var(--offWhite);
     text-align: center;
     padding-bottom: 40px;
@@ -164,39 +203,41 @@ footer h3 {
     box-shadow: 0px 6px 6px rgba(1, 22, 30, 0.25);
 }
 
+
+/* Shift everything to a single column if on a tablet or smaller */
+
 @media screen and (max-width: 768px) {
-    h2 {
-        text-align: center;
-    }
-    header {
-        width: 100%;
-    }
     nav ul {
         flex-direction: column;
         align-items: center;
     }
-    nav ul li {
-        box-shadow: 0px 3px 3px rgba(1, 22, 30, 0.1);
-        width: 100%;
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    h2 {
         text-align: center;
     }
-    nav ul li a {
-        border-bottom: none;
-        display: block;
+    article {
+        padding-top: 2em;
     }
-    main {
-        width: 100%;
-    }
-    .article {
+    .about article {
         flex-direction: column-reverse;
-        justify-content: center;
         align-items: center;
-        width: 100%;
+        justify-content: center;
     }
-    .article p {
-        padding: 20px;
+    .about article p {
+        flex-basis: 100%;
     }
-    .firstProj {
-        flex-basis: 350px;
+    .projects {
+        background-color: var(--steelTeal);
+        box-shadow: 0 5px 5px gray;
+    }
+    .flexBox {
+        align-items: center;
+        justify-content: center;
+    }
+    .card {
+        flex: 0 1 90%;
     }
 }

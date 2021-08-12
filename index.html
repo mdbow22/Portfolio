@@ -9,52 +9,57 @@
 </head>
 
 <body>
-    <header>
-        <h1>Matthew Bow</h1>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#about">About</a>
-                </li>
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
-                <li>
-                    <a href="#connect">Connect</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
+    <div class="container">
+        <header>
+            <h1>Matthew Bow</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#connect">Connect</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section class="about">
             <h2 id="about">About</h2>
-            <article class="article">
+            <article>
                 <p>
                     I am a former financial analytics guru turned full-stack developer. Creating beautiful websites that are as fun as they are functional brought me into the coding world. My background covers front-end frameworks like <strong>Bootstrap</strong>                    and <strong>React</strong>, and my backend knowledge encompasses <strong>NodeJS, Express, SQL</strong>, and <strong>MongoDB</strong>. I look forward to working with you on your latest project!
                 </p>
                 <img class="profileImg" src="./assets/images/profileImageSquare.jpg" alt="picture of Matt holding his phone" />
             </article>
         </section>
-        <section class="projSection">
+        <section class="projects">
             <h2 id="projects">Projects</h2>
-            <article class="article">
-                <div class="firstProj">
+            <div class="flexBox">
+                <div class="card">
                     <h3>Color Game</h3>
                     <a href="https://mdbow22.github.io/RGBColorGame/colorGame.html" target="_blank"><img src="./assets/images/colorGameScrnShot.PNG" alt="screenshot of the color game" /></a>
                 </div>
-                <div class="projItem">
+                <div class="card">
                     <h3>Color Game</h3>
-                    <img src="./assets/images/colorGameScrnShot.PNG" alt="screenshot of the color game" />
+                    <a href="https://mdbow22.github.io/RGBColorGame/colorGame.html" target="_blank"><img src="./assets/images/colorGameScrnShot.PNG" alt="screenshot of the color game" /></a>
                 </div>
-                <div class="projItem">
+                <div class="card">
                     <h3>Color Game</h3>
-                    <img src="./assets/images/colorGameScrnShot.PNG" alt="screenshot of the color game" />
+                    <a href="https://mdbow22.github.io/RGBColorGame/colorGame.html" target="_blank"><img src="./assets/images/colorGameScrnShot.PNG" alt="screenshot of the color game" /></a>
                 </div>
-            </article>
+                <div class="card">
+                    <h3>Color Game</h3>
+                    <a href="https://mdbow22.github.io/RGBColorGame/colorGame.html" target="_blank"><img src="./assets/images/colorGameScrnShot.PNG" alt="screenshot of the color game" /></a>
+                </div>
+            </div>
         </section>
-        <section>
+        <div class="projBkgrnd"></div>
+        <section class="connect">
             <h2 id="connect">Connect</h2>
-            <article class="article">
+            <article>
                 <div class="connectBox">
                     <h3>Email</h3>
                     <span><a href="mailto:mdbow22@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></span>
@@ -65,10 +70,11 @@
                 </div>
             </article>
         </section>
-    </main>
+    </div>
     <footer>
         <h3>Copyright &copy; 2021 Matthew Bow</h3>
     </footer>
+
 </body>
 
 </html>
