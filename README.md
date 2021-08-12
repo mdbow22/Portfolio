@@ -14,8 +14,8 @@ This is a small portfolio page that will be used to showcase the projects I have
 
 ### Desktop-Size Viewport
 
-![screenshot of desktop sized site](assets/images/screenshot.png)
+![screenshot of desktop sized site](https://github.com/mdbow22/Portfolio/blob/e0379749302276a16f716b99a1c00a2a0dddacf2/assets/images/screenshot.PNG)
 
 ### Mobile Viewport
 
-![screenshot of mobile sized site](assets/images/screenshotMobile.png)
+![screenshot of mobile sized site](https://github.com/mdbow22/Portfolio/blob/0e016cbae583314953fef902d12532e49e0fadcc/assets/images/screenshotMobile.PNG)
