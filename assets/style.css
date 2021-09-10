@@ -4,53 +4,50 @@
     --fadedGreen: rgb(174, 195, 176);
     --highlight: #5499A0;
     --text: #182D39;
+    --headerFont: 'Kanit',sans-serif;
+    --contentFont: 'Atkinson Hyperlegible',sans-serif;
 }
 
 * {
-    font-family: "Atkinson Hyperlegible", sans-serif;
+    font-family: var(--contentFont);
     color: var(--text);
 }
 
 body {
-    background-color: var(--light);
+    background: rgb(41,31,77);
+    background: linear-gradient(135deg, rgba(41,31,77,0.9) 10%, rgba(32,50,89,0.9) 80%);
+    height: 100vh;
+    font-family: Helvetica;
+    width: 100%;
+    color: rgba(40,40,40,0.8);
+    background-attachment: fixed;
 }
-
-h1,
-h3 {
-    color: var(--light);
-}
-
-
-/* Set up the grid to have a header 3 content boxes and a footer */
 
 .container {
-    display: grid;
-    gap: 100px 0;
-    grid-template-columns: 1fr 3fr 1fr;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1028px;
+  margin: 50px auto;
+  border-top: 1px solid rgba(255,255,255,0.8);
+  border-left: 1px solid rgba(255,255,255,0.8);
+  border-radius: 15px;
+  box-shadow: 10px 10px 20px rgba(0,0,0,0.2);
+  backdrop-filter: blur(10px);
+  z-index: 2;
 }
 
-header,
-.about,
-.connect,
-footer {
-    grid-column: 2 / 3;
+aside, main {
+    padding: 10px;
 }
 
-.projects {
-    grid-area: 3 / 2 / 4 / 3;
+aside {
+    width: 400px;
+    background: rgba(255,255,255,0.1);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
-
-
-/* This creates an empty cell used to give the background effect */
-
-.projBkgrnd {
-    grid-area: 3 / 2 / 4 / 4;
-    background-color: var(--highlight);
-    box-shadow: 0 5px 5px #CCCCCC;
-    position: relative;
-    z-index: -1;
-}
-
 
 /* Styles for Header */
 
@@ -77,19 +74,21 @@ header h1 {
 /* Styles for Navigation Bar */
 
 nav {
-    width: 50%;
+    width: 100%;
 }
 
 nav ul {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
+    text-align: center;
     font-size: 1.5em;
     line-height: 250%;
 }
 
 nav ul li {
     font-weight: bold;
+    text-align: center;
 }
 
 nav ul li a {
@@ -126,7 +125,7 @@ article h3,
 }
 
 .profileImg {
-    width: 400px;
+    width: 150px;
     height: inherit;
     border-radius: 50%;
 }
@@ -206,6 +205,27 @@ footer h3 {
     background-color: var(--highlight);
     box-shadow: 0px 6px 6px rgba(1, 22, 30, 0.25);
 }
+
+.firstCircle {
+    height: 66vw;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: #fff;
+    background: linear-gradient(135deg, rgba(41,31,77,0.5) 10%, rgba(32,50,89,0.5) 80%);
+    position: fixed;
+    top: -25vw;
+    left: -25vw;
+  }
+  
+  .secondCircle {
+    position: fixed;
+    bottom: -25vw;
+    right: -25vw;
+    height: 66vw;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(41,31,77,0.5) 10%, rgba(32,50,89,0.5) 80%);
+  }
 
 
 /* Shift everything to a single column if on a tablet or smaller */
