@@ -26,10 +26,9 @@ body {
 .container {
   position: relative;
   display: flex;
-  justify-content: space-between;
   width: 80%;
   max-width: 1028px;
-  margin: 50px auto;
+  margin: 10vh auto;
   border-top: 1px solid rgba(255,255,255,0.8);
   border-left: 1px solid rgba(255,255,255,0.8);
   border-radius: 15px;
@@ -39,66 +38,39 @@ body {
 }
 
 aside, main {
-    padding: 10px;
+    padding: 15px;
 }
 
 aside {
-    width: 400px;
+    width: 250px;
     background: rgba(255,255,255,0.1);
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
 }
 
-/* Styles for Header */
-
-header {
+main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-header h1 {
-    width: 50%;
-    font-family: 'Kanit', sans-serif;
-    text-transform: uppercase;
-    font-size: 3em;
-    text-align: center;
-    padding-top: 40px;
-    padding: 40px 5px 0px 5px;
-    background-color: var(--highlight);
-    box-shadow: 0px 6px 10px #CCCCCC;
-}
-
-
-/* Styles for Navigation Bar */
-
-nav {
     width: 100%;
 }
+/* Styles for Navigation Bar */
 
-nav ul {
+ul {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    text-align: center;
     font-size: 1.5em;
     line-height: 250%;
 }
 
-nav ul li {
+ul li {
     font-weight: bold;
     text-align: center;
 }
 
-nav ul li a {
+ul li a {
     text-decoration: none;
     color: var(--highlight);
-    border-bottom: 5px solid var(--highlight);
-}
-
-#about {
-    visibility: hidden;
 }
 
 h2 {
@@ -154,7 +126,7 @@ article p {
 }
 
 .card img {
-    width: 100%;
+    width: 50%;
     aspect-ratio: 3 / 2;
     box-shadow: 3px 5px 5px var(--text);
 }
