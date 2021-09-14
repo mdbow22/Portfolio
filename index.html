@@ -3,7 +3,7 @@
 
 <head>
     <title>Matthew Bow</title>
-    <script src="https://use.fontawesome.com/b68361347c.js"></script>
+    <script src="https://kit.fontawesome.com/b6aa32c5ac.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/reset.css" />
     <link rel="stylesheet" href="./assets/style.css" />
 </head>
@@ -11,19 +11,27 @@
 <body>
     <div class="container">
         <aside>
-            <h1>Matthew Bow</h1>
-            <img class="profileImg" src="./assets/images/profileImageSquare.jpg" alt="picture of Matt holding his phone" />
-                <ul>
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-                    <li>
-                        <a href="#projects">Projects</a>
-                    </li>
-                    <li>
-                        <a href="#connect">Connect</a>
-                    </li>
-                </ul>
+            <h1 class="name">Matthew Bow</h1>
+            <h1 class="section-title about">About</h1>
+            <h1 class="section-title projects">Projects</h1>
+            <h1 class="section-title connect">Connect</h1>
+                <button class="menu-toggle"><i class="fas fa-bars"></i><i class="fas fa-times on-off"></i></button>
+                <nav class="on-off">
+                    <ul>
+                        <li>
+                            <a href="#home">Home</a>
+                        </li>
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li>
+                            <a href="#projects">Projects</a>
+                        </li>
+                        <li>
+                            <a href="#connect">Connect</a>
+                        </li>
+                    </ul>
+                </nav>
         </aside>
         <main>
             <section id="about">
@@ -32,6 +40,7 @@
                     <p>
                         I am a former financial analytics guru turned full-stack developer. Creating beautiful websites that are as fun as they are functional brought me into the coding world. My background covers front-end frameworks like <strong>Bootstrap</strong>                    and <strong>React</strong>, and my backend knowledge encompasses <strong>NodeJS, Express, SQL</strong>, and <strong>MongoDB</strong>. I look forward to working with you on your latest project!
                     </p>   
+                    <img class="profileImg" src="./assets/images/profileImageSquare.jpg" alt="picture of Matt holding his phone" />
                 </article>
             </section>
             <section id="projects">
@@ -55,8 +64,8 @@
                     </div>
                 </div>
             </section>
-            <section class="connect">
-                <h2 id="connect">Connect</h2>
+            <section id="connect">
+                <h2>Connect</h2>
                 <article>
                     <div class="card">
                         <h3>Email</h3>
@@ -70,7 +79,7 @@
             </section>
         </main>
     </div>
-
+    <script src="./assets/script.js"></script>
 </body>
 
 </html>

@@ -3,7 +3,7 @@
     --light: #F1F1F1;
     --fadedGreen: rgb(174, 195, 176);
     --highlight: #5499A0;
-    --text: #182D39;
+    --text: #413025;
     --headerFont: 'Kanit',sans-serif;
     --contentFont: 'Atkinson Hyperlegible',sans-serif;
 }
@@ -15,26 +15,23 @@
 
 body {
     background:
-    radial-gradient(circle at 5% 10%, rgba(184,240,240,0.6),rgba(163,119,93,0.3) 60%),
-    radial-gradient(circle at 80% 80%, rgba(184,240,240,0.9),rgba(163,119,93,0.2) 60%);
-  radial-gradient(circle at 90% 5%, rgba(184,240,240,0.5),rgba(240,205,185,0.5) 60%);
+    radial-gradient(circle at 5% 10%, rgba(109,163,163,0.7),rgba(163,119,93,0.3) 60%),
+    radial-gradient(circle at 80% 80%, rgba(109,163,163,0.9),rgba(163,119,93,0.2) 60%);
   background-attachment: fixed;
-  font-family: Helvetica, sans-serif;
   color: #684C3B;
+  height: 100%;
 }
 
 .container {
-  position: relative;
   display: flex;
-  width: 80%;
-  max-width: 1028px;
-  margin: 10vh auto;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
   border-top: 1px solid rgba(255,255,255,0.8);
   border-left: 1px solid rgba(255,255,255,0.8);
-  border-radius: 15px;
   box-shadow: 10px 10px 20px rgba(0,0,0,0.2);
   backdrop-filter: blur(10px);
-  z-index: 2;
 }
 
 aside, main {
@@ -42,58 +39,73 @@ aside, main {
 }
 
 aside {
-    width: 250px;
     background: rgba(255,255,255,0.2);
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
+    /* border-top-left-radius: 15px;
+    border-top-right-radius: 15px; */
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+.menu-toggle {
+    position: absolute;
+    left: 90%;
+    top: 0px;
+    font-size: 2em;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: var(--text);
+    z-index: 2;
+    
 }
+
+h1 {
+    margin-top: 50px;
+    font-size: 3em;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+    font-family: 'Kanit', sans-serif;
+    transition: 1s ease-in-out;
+    text-align: center;
+}
+
 /* Styles for Navigation Bar */
+
+
+
+
+
+
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.8);
+    z-index: 1;
+    backdrop-filter: blur(3px);
+}
+
+.on-off {
+    display: none;
+}
 
 ul {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    font-size: 1.5em;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+    font-size: 3em;
+    font-weight: bold;;
     line-height: 250%;
 }
 
-ul li {
-    font-weight: bold;
-    text-align: center;
-}
-
 ul li a {
-    text-decoration: none;
-    color: var(--highlight);
-}
-
-h2 {
     font-family: 'Kanit', sans-serif;
-    font-size: 2.5em;
-    position: relative;
-    left: 0;
-    top: -1.2em;
-    margin-bottom: -1em;
-}
-
-article {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px 20px;
-    gap: 20px;
-}
-
-article h3,
-.flexBox h3 {
-    font-size: 2em;
-    font-weight: bold;
+    text-decoration: none;
+    color: var(--text);
 }
 
 .profileImg {
@@ -102,132 +114,24 @@ article h3,
     border-radius: 50%;
 }
 
-article p {
-    flex-basis: 45%;
-    padding-right: 20px;
-    font-size: 1.25em;
+h2 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 2.5em;
+    position: relative;
+    left: 0;
+    z-index: -1;
 }
 
-
-/* FlexBox container for the grid of projects */
-
-.flexBox {
+main {
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 20px 20px;
-    color: var(--light);
-}
-
-.card {
-    flex: 0 1 45%;
-    text-align: center;
-}
-
-.card img {
-    width: 50%;
-    aspect-ratio: 3 / 2;
-    box-shadow: 3px 5px 5px var(--text);
-}
-
-.card a:hover,
-.card a:focus,
-.card a:active {
-    opacity: 0.7;
-}
-
-
-/* Styles for Connect section */
-
-.connectBox {
-    width: 45%;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-}
-
-.connectBox h3 {
-    color: var(--text);
-}
-
-.fa {
-    font-size: 6em;
-}
-
-
-/* Footer Styles */
-
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
+    flex-direction: column;
     width: 100%;
-    margin-bottom: 0;
 }
 
-footer h3 {
-    width: 40%;
-    color: var(--light);
-    text-align: center;
-    padding-bottom: 40px;
-    padding: 0 5px;
-    line-height: 300%;
-    background-color: var(--highlight);
-    box-shadow: 0px 6px 6px rgba(1, 22, 30, 0.25);
+.section-title {
+    display: none;
 }
 
-
-/* Shift everything to a single column if on a tablet or smaller */
-
-@media screen and (max-width: 768px) {
-    header h1,
-    nav {
-        width: 100%;
-        text-align: center;
-    }
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    nav ul li {
-        box-shadow: 0px 3px 3px rgba(1, 22, 30, 0.1);
-        width: 100%;
-        text-align: center;
-    }
-    nav ul li a {
-        display: block;
-        border-bottom: 1px;
-    }
-    .container {
-        display: flex;
-        flex-direction: column;
-    }
-    h2 {
-        text-align: center;
-    }
-    article {
-        padding-top: 2em;
-    }
-    .about article {
-        flex-direction: column-reverse;
-        align-items: center;
-        justify-content: center;
-    }
-    .about article p {
-        flex-basis: 100%;
-    }
-    .projects {
-        background-color: var(--highlight);
-        box-shadow: 0 5px 5px gray;
-        color: var(--light);
-    }
-    .flexBox {
-        align-items: center;
-        justify-content: center;
-    }
-    .card {
-        flex: 0 1 90%;
-    }
+#projects, #connect {
+    display: none;
 }
