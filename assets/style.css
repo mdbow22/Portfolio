@@ -70,12 +70,6 @@ h1 {
 
 /* Styles for Navigation Bar */
 
-
-
-
-
-
-
 nav {
     position: fixed;
     top: 0;
@@ -132,6 +126,6 @@ main {
     display: none;
 }
 
-#projects, #connect {
+#about, #projects, #connect {
     display: none;
 }
