@@ -10,85 +10,35 @@
 
 <body>
     <div class="container">
-        <aside>
-            <h1 class="name">Matthew Bow</h1>
-            <h1 class="section-title about">About</h1>
-            <h1 class="section-title projects">Projects</h1>
-            <h1 class="section-title connect">Connect</h1>
-                <button class="menu-toggle"><i class="fas fa-bars"></i><i class="fas fa-times on-off"></i></button>
-                <nav class="on-off">
-                    <ul>
-                        <li>
-                            <a href="#">Home</a>
-                        </li>
-                        <li>
-                            <a href="#">About</a>
-                        </li>
-                        <li>
-                            <a href="#">Projects</a>
-                        </li>
-                        <li>
-                            <a href="#">Connect</a>
-                        </li>
-                    </ul>
-                </nav>
-        </aside>
-        <main>
-            <section id="home">
-                <h2>Hello.</h2>
-                <img class="profileImg" src="./assets/images/profileImageSquare.jpg" alt="picture of Matt holding his phone" />
-                <p>Matthew Bow (n),</p>
-                <p>Father, writer, full-stack web developer.</p>
-                <div class="hero-links">
-                    <button>More</button>
-                    <button>Connect</button>
-                </div>
-            </section>
-            <section id="about">
-                <h2 class="section-title">About</h2>
-                <article>
-                    <p>
-                        I am a former financial analytics guru turned full-stack developer. Creating beautiful websites that are as fun as they are functional brought me into the coding world. My background covers front-end frameworks like <strong>Bootstrap</strong>                    and <strong>React</strong>, and my backend knowledge encompasses <strong>NodeJS, Express, SQL</strong>, and <strong>MongoDB</strong>. I look forward to working with you on your latest project!
-                    </p>   
-                    <img class="profileImg" src="./assets/images/profileImageSquare.jpg" alt="picture of Matt holding his phone" />
-                </article>
-            </section>
-            <section id="projects">
-                <h2 class="section-title">Projects</h2>
-                <div class="flexBox">
-                    <div class="card">
-                        <h3>Color Game</h3>
-                        <a href="https://mdbow22.github.io/RGBColorGame/colorGame.html" target="_blank"><img src="./assets/images/colorGameScrnShot.PNG" alt="screenshot of the color game" /></a>
+        <header class="header">
+            <div class="row">
+                <button class="menu-btn"><i class="fas fa-bars"></i></button>
+            </div>
+            <div class="row head-title">
+                <h1>Hello</h1>
+            </div>
+        </header>
+        <main class="content-box">
+            <section class="home-section">
+                <div class="about-me">
+                    <div class="me-text">
+                        <h3>I'm</h3>
+                        <h2>Matt Bow</h2>
+                        <p>A full-stack web developer from Ohio.</p>
                     </div>
-                    <div class="card">
-                        <h3>Color Game</h3>
-                        <a href="https://mdbow22.github.io/RGBColorGame/colorGame.html" target="_blank"><img src="./assets/images/colorGameScrnShot.PNG" alt="screenshot of the color game" /></a>
-                    </div>
-                    <div class="card">
-                        <h3>Color Game</h3>
-                        <a href="https://mdbow22.github.io/RGBColorGame/colorGame.html" target="_blank"><img src="./assets/images/colorGameScrnShot.PNG" alt="screenshot of the color game" /></a>
-                    </div>
-                    <div class="card">
-                        <h3>Color Game</h3>
-                        <a href="https://mdbow22.github.io/RGBColorGame/colorGame.html" target="_blank"><img src="./assets/images/colorGameScrnShot.PNG" alt="screenshot of the color game" /></a>
+                    <div class="profile-pic">
+                        <img src="./assets/images/profileImageSquare.jpg">
                     </div>
                 </div>
-            </section>
-            <section id="connect">
-                <h2 class="section-title">Connect</h2>
-                <article>
-                    <div class="card">
-                        <h3>Email</h3>
-                        <span><a href="mailto:mdbow22@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></span>
-                    </div>
-                    <div class="card">
-                        <h3>LinkedIn</h3>
-                        <span><a href="https://www.linkedin.com/in/matthew-bow-5525895a/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></span>
-                    </div>
-                </article>
+                <div class="home-buttons">
+                    <button class="home-btn">Meet Me</button>
+                    <button class="home-btn">Connect</button>
+                </div>
             </section>
         </main>
     </div>
+    <div class="circle-1"></div>
+    <div class="circle-2"></div>
     <script src="./assets/script.js"></script>
 </body>
 
