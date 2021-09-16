@@ -1,15 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
 /**********************
 /* BACKGROUND STYLING *
 ***********************/
 
 body {
-    background: rgb(41,31,77);
-    background: linear-gradient(to bottom right, #6DA3A3 10%, #A3775D 80%);
+    background: #100B1D /*#18112C8*/;
+    /*background: linear-gradient(to bottom right, #6DA3A3 10%, #A3775D 80%);*/
     font-family: 'Raleway',sans-serif;
     color: #ffffff;
+}
+
+.circle-1, .circle-2 {
+    display: none;
 }
 
 .circle-1 {
@@ -42,7 +47,8 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-family: 'Kanit', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    
 }
 
 /******************
@@ -61,7 +67,7 @@ h1,h2,h3,h4,h5,h6 {
 .header {
     background-color: rgba(255,255,255,0.3);
     backdrop-filter: blur(10px);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
 }
 
 .menu-btn {
@@ -86,11 +92,12 @@ h1,h2,h3,h4,h5,h6 {
     margin: 30px auto;
     padding: 30px;
     padding-left: 50px;
-    background-color: rgba(255,255,255,0.2);
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+    /* background-color: rgba(255,255,255,0.2);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
     border-top: 1px solid #ffffff;
     border-left: 1px solid #ffffff;
     backdrop-filter: blur(10px);
+    border-radius: 5px; */
 }
 
 .home-section {
@@ -109,7 +116,6 @@ h1,h2,h3,h4,h5,h6 {
 
 .me-text {
     margin-bottom: 50px;
-    min-height: 180px;
 }
 
 .home-section h3 {
@@ -117,11 +123,13 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 2.5em;
     font-weight: 400;
     margin-bottom: 15px;
+    text-transform: none;
 }
 
 .home-section h2 {
     font-size: 2.5em;
     margin-bottom: 40px;
+    color: #BeF0F0;
 }
 
 .profile-pic {
@@ -133,6 +141,7 @@ h1,h2,h3,h4,h5,h6 {
 img {
     width: inherit;
     border-radius: 50%;
+    border: 4px solid #BeF0F0;
 }
 
 .home-buttons {
@@ -142,20 +151,16 @@ img {
 }
 
 .home-btn {
+    background: transparent;
     padding: 10px;
-    background: rgba(255,255,255,0.3);
-    border: none;
+    border: 4px solid rgba(255,255,255,1);
     font-size: 2em;
     color: #ffffff;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
-    border-top: 1px solid #ffffff;
-    border-left: 1px solid #ffffff;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
 }
 
-.home-btn:active {
-    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.5);
-    border-top: none;
-    border-left: none;
-    /* border-bottom: 1px solid #ffffff;
-    border-right: 1px solid #ffffff; */
+.home-btn:hover {
+    border-color: #BeF0F0; 
+    color: #BeF0F0;
 }
