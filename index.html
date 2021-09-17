@@ -12,14 +12,20 @@
     <div class="container">
         <header class="header">
             <div class="row">
-                <button class="menu-btn"><i class="fas fa-bars"></i></button>
+                <ul>
+                    <li><i class="fab fa-twitter"></i></li>
+                    <li><i class="fab fa-github"></i></li>
+                    <li><i class="far fa-envelope"></i></li>
+                </ul>
+                <button class="menu-btn"><i class="fas fa-bars"></i><i class="fas fa-times off"></i></button>
             </div>
             <div class="row head-title">
-                <h1>Hello</h1>
+                <h1 class="hidden">Hello</h1>
+                <h1 class="">About Me</h1>
             </div>
         </header>
         <main class="content-box">
-            <section class="home-section">
+            <section class="home-section hidden">
                 <div class="about-me">
                     <div class="me-text">
                         <h3>I'm</h3>
@@ -31,14 +37,39 @@
                     </div>
                 </div>
                 <div class="home-buttons">
-                    <button class="home-btn">Meet Me</button>
-                    <button class="home-btn">Connect</button>
+                    <button type="button" class="home-btn">Meet Me</button>
+                    <button type="button" class="home-btn">Connect</button>
                 </div>
+            </section>
+            <section class="about-section">
+                <p>
+                    I am a full-stack web developer with a background in financial analytics and strategy. I earned a certificate in full-stack development from The Ohio State University. Always seen as someone, who can synthesize data for a general audience, I leverage that experience to create structured databases and implement them in ways that users can interact with intuitively and productively.
+                </p>
+                <h2>Skills</h2>
+                <ul class="skills-list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>NodeJS</li>
+                    <li>React</li>
+                    <li>SQL</li>
+                    <li>MongoDB</li>
+                </ul>
+
+                <h2>Experience</h2>
+                <ul class="resume-list">
+                    <li><h3>Experience 1</h3>
+                        <h4>2019-2020</h4>
+                        <p>Yeah, but your scientists were so preoccupied with whether or not they could, they didn't stop to think if they should.</p>
+                    </li>
+                    <li><h3>Experience 2</h3>
+                        <h4>2016-2019</h4>
+                        <p>Yeah, but your scientists were so preoccupied with whether or not they could, they didn't stop to think if they should.</p>
+                    </li>
+                </ul>
             </section>
         </main>
     </div>
-    <div class="circle-1"></div>
-    <div class="circle-2"></div>
     <script src="./assets/script.js"></script>
 </body>
 
