@@ -13,10 +13,10 @@
         <nav class="off">
             <div class="row"><button type="button" class="exit-btn"><i class="fas fa-times"></i></button></div>
             <ul class="nav-list">
-                <li>Home</li>
-                <li>About</li>
-                <li>Projects</li>
-                <li>Connect</li>
+                <li class="list-item" data-target="home">Home</li>
+                <li class="list-item" data-target="about">About</li>
+                <li class="list-item" data-target="projects">Projects</li>
+                <li class="list-item" data-target="connect">Connect</li>
             </ul>
         </nav>
         <header class="header">
@@ -29,8 +29,9 @@
                 <button class="menu-btn"><i class="fas fa-bars"></i></button>
             </div>
             <div class="row head-title">
-                <h1 class="hidden">Hello</h1>
-                <h1 class="">About Me</h1>
+                <h1 id="hello" class="hidden">Hello</h1>
+                <h1 id="aboutMe" class="hidden">About Me</h1>
+                <h1 id="projects" class="">Projects</h1>
             </div>
         </header>
         <main class="content-box">
@@ -50,7 +51,7 @@
                     <button type="button" class="home-btn">Connect</button>
                 </div>
             </section>
-            <section class="about-section">
+            <section class="about-section hidden">
                 <p>
                     I am a full-stack web developer with a background in financial analytics and strategy. I earned a certificate in full-stack development from The Ohio State University. Always seen as someone, who can synthesize data for a general audience, I leverage that experience to create structured databases and implement them in ways that users can interact with intuitively and productively.
                 </p>
@@ -77,7 +78,24 @@
                     </li>
                 </ul>
             </section>
+            <section class="project-section">
+                <div class="proj-card">
+                    <h3>National Parks Explorer</h3>
+                </div>
+                <div class="proj-card">
+                    <h3>Weatherboard</h3>
+                    <div class="proj-img">
+                        SCREENSHOT HERE
+                    </div>
+                </div>
+                <div class="proj-card">
+                    <h3>Daily Planner</h3>
+                </div>
+            </section>
         </main>
+        <footer>
+            <h4>Copyright &copy; 2021 Matthew Bow</h4>
+        </footer>
     </div>
     <script src="./assets/script.js"></script>
 </body>
