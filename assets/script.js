@@ -6,11 +6,13 @@ let times = document.querySelector('.fa-times');
 let menu = document.querySelector('nav');
 let body = document.getElementById('site-body');
 let navList = document.querySelector('.nav-list');
+let homeBtns = document.querySelectorAll('.home-btn');
 let home = document.querySelector('.home-section');
 let about = document.querySelector('.about-section');
+let proj = document.querySelector('.project-section');
 let hello = document.getElementById('hello');
 let aboutMe = document.getElementById('aboutMe');
-let projects = document.querySelectorAll('.proj-card');
+let projects = document.getElementById('projects');
 
 
 //Event Listeners
@@ -35,17 +37,34 @@ navList.addEventListener('click', (e) => {
             hello.classList.remove('hidden');
             about.classList.add('hidden');
             aboutMe.classList.add('hidden');
+            proj.classList.add('hidden');
+            projects.classList.add('hidden');
             break;
         case 'about':
             about.classList.remove('hidden');
             aboutMe.classList.remove('hidden');
             home.classList.add('hidden');
             hello.classList.add('hidden');
+            proj.classList.add('hidden');
+            projects.classList.add('hidden');
+            break;
+        case 'projects':
+            proj.classList.remove('hidden');
+            projects.classList.remove('hidden');
+            home.classList.add('hidden');
+            hello.classList.add('hidden');
+            about.classList.add('hidden');
+            aboutMe.classList.add('hidden');
+            break;
     }
     menu.classList.add('off');
     setTimeout(() => menu.style.opacity = '0',600);
+    body.style.overflow = 'visible';
 });
 
-for(let i = 0; i < projects.length; i++) {
-    projects[i].addEventListener('click', () => projects[i].classList.add('active-project'));
-}
+homeBtns[0].addEventListener('click',() => {
+    about.classList.remove('hidden');
+    aboutMe.classList.remove('hidden');
+    home.classList.add('hidden');
+    hello.classList.add('hidden');
+});
