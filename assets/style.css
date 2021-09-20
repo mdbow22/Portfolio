@@ -1,262 +1,378 @@
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Kanit:wght@400;700&display=swap');
-:root {
-    --light: #F1F1F1;
-    --fadedGreen: rgb(174, 195, 176);
-    --highlight: #5499A0;
-    --text: #182D39;
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.hidden {
+    display: none;
 }
 
-* {
-    font-family: "Atkinson Hyperlegible", sans-serif;
-    color: var(--text);
+section.hidden {
+    display: none;
 }
+
+/**********************
+/* BACKGROUND STYLING *
+***********************/
 
 body {
-    background-color: var(--light);
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+    background: #100B1D /*#18112C8*/;
+    font-family: 'Raleway',sans-serif;
+    color: #ffffff;
 }
 
-h1,
-h3 {
-    color: var(--light);
+/* GLOBAL STYLING HELP */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
 }
 
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: #BeF0F0;
+}
 
-/* Set up the grid to have a header 3 content boxes and a footer */
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    
+}
+
+/******************
+/* MAIN CONTAINER *
+*******************/
 
 .container {
-    display: grid;
-    gap: 100px 0;
-    grid-template-columns: 1fr 3fr 1fr;
-}
-
-header,
-.about,
-.connect,
-footer {
-    grid-column: 2 / 3;
-}
-
-.projects {
-    grid-area: 3 / 2 / 4 / 3;
-}
-
-
-/* This creates an empty cell used to give the background effect */
-
-.projBkgrnd {
-    grid-area: 3 / 2 / 4 / 4;
-    background-color: var(--highlight);
-    box-shadow: 0 5px 5px #CCCCCC;
     position: relative;
-    z-index: -1;
+    width: 100%;
+    max-width: 992px;
+    height: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255,255,255,0.2);
 }
 
+/* Menu Toggle */
 
-/* Styles for Header */
+.header {
+    background-color: rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
+    margin-top: 20px;
+    border-top: 1px solid #ffffff;
+}
 
-header {
+.menu-btn {
+    position: relative;
+    margin-left: auto;
+    margin-right: 20px;
+    font-size: 2em;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 998;
+}
+
+.header ul {
+    display: flex;
+    gap: 20px;
+    height: 2em;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.header ul li {
+    font-size: 1.5em;
+}
+
+.off {
+    transform: translateY(-100vh);
+}
+
+.header h1 {
+    font-size: 3em;
+    text-align: center;
+    width: 100%;
+}
+
+/* NAVIGATION */
+
+nav {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(255,255,255,0.6);
+    color: #100B1D;
+    z-index: 3;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transform: translateY(0);
+    backdrop-filter: blur(10px);
+    transition: transform 500ms ease-in-out;
+    opacity: 0;
 }
 
-header h1 {
-    width: 50%;
-    font-family: 'Kanit', sans-serif;
-    text-transform: uppercase;
-    font-size: 3em;
-    text-align: center;
-    padding-top: 40px;
-    padding: 40px 5px 0px 5px;
-    background-color: var(--highlight);
-    box-shadow: 0px 6px 10px #CCCCCC;
-}
-
-
-/* Styles for Navigation Bar */
-
-nav {
-    width: 50%;
-}
-
-nav ul {
+.nav-list {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    font-size: 1.5em;
-    line-height: 250%;
-}
-
-nav ul li {
-    font-weight: bold;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: var(--highlight);
-    border-bottom: 5px solid var(--highlight);
-}
-
-#about {
-    visibility: hidden;
-}
-
-h2 {
-    font-family: 'Kanit', sans-serif;
-    font-size: 2.5em;
-    position: relative;
-    left: 0;
-    top: -1.2em;
-    margin-bottom: -1em;
-}
-
-article {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px 20px;
-    gap: 20px;
-}
-
-article h3,
-.flexBox h3 {
-    font-size: 2em;
-    font-weight: bold;
-}
-
-.profileImg {
-    width: 400px;
+    flex-direction: column;
+    justify-content: space-around;
     height: inherit;
-    border-radius: 50%;
+    align-items: center; 
 }
 
-article p {
-    flex-basis: 45%;
-    padding-right: 20px;
+.list-item {
+    position: relative;
+    font-size: 3em;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.list-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(255,255,255,0.4) 10%, transparent 80%);
+    z-index: -1;
+    transition: width 200ms ease-in;
+}
+
+.list-item:hover::before {
+    width: 100%;
+}
+
+nav .row {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.exit-btn {
+    position: relative;
+    font-size: 2em;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 999;
+}
+
+
+/* MAIN CONTENT */
+
+.content-box {
+    width: 90%;
+    margin: 60px auto;
+}
+
+/* LANDING PAGE */
+
+.home-section, .about-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.about-me {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.me-text {
+    margin-bottom: 50px;
+}
+
+.me-text h3 {
+    color: #ffffff;
+}
+
+.home-section h3 {
+    font-family: 'Raleway',sans-serif;
+    font-size: 2.5em;
+    font-weight: 400;
+    margin-bottom: 15px;
+    text-transform: none;
+}
+
+.profile-pic {
+    width: 180px;
+    aspect-ratio: 1/1;
+    margin-bottom: 50px;
+}
+
+img {
+    width: inherit;
+    border-radius: 50%;
+    border: 4px solid #FFFFFF;
+}
+
+.home-buttons {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.home-btn {
+    position: relative;
+    background: transparent;
+    padding: 10px;
+    border: 4px solid #BeF0F0;
+    font-size: 2em;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.home-buttons .home-btn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 100%;
+    transition: width 200ms ease-in-out;
+    background: #BEF0F0;
+    z-index: -1;
+}
+
+.home-btn:hover {
+    color: #100B1D;
+}
+
+.home-btn:hover::before {
+    width: 100%;
+}
+
+/* ABOUT SECTION */
+
+.about-section {
     font-size: 1.25em;
 }
 
+.about-section h2 {
+    font-size: 2em;
+    margin-top: 40px;
+}
 
-/* FlexBox container for the grid of projects */
+.about-section p {
+    line-height: 1.5em;
+}
 
-.flexBox {
+.skills-list {
     display: flex;
-    gap: 20px;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 20px 20px;
-    color: var(--light);
+    justify-content: space-around;
 }
 
-.card {
-    flex: 0 1 45%;
-    text-align: center;
+.skills-list li {
+    margin: 15px;
+    padding: 10px;
+    border: 4px solid #ffffff;
+    font-weight: 400;
 }
 
-.card img {
-    width: 100%;
-    aspect-ratio: 3 / 2;
-    box-shadow: 3px 5px 5px var(--text);
+.resume-list h3 {
+    font-size: 1.25em;
 }
 
-.card a:hover,
-.card a:focus,
-.card a:active {
-    opacity: 0.7;
+.resume-list h4 {
+    line-height: 2em;
+    color: #ffffff;
 }
 
+.resume-list li {
+    margin-bottom: 30px;
+}
 
-/* Styles for Connect section */
+/* PROJECTS SECTION */
 
-.connectBox {
-    width: 45%;
+.project-section {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    height: 100%;
+}
+
+.proj-card {
     display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
+    flex-direction: column;
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
+    background: rgba(255,255,255,0.3);
+    padding: 10px;
 }
 
-.connectBox h3 {
-    color: var(--text);
+.proj-card p {
+    text-align: left;
+    margin-bottom: 20px;
 }
 
-.fa {
-    font-size: 6em;
+.proj-card h3 {
+    font-size: 1.25em;
+    text-align: center;
+    margin-bottom: 15px;
 }
 
-
-/* Footer Styles */
-
-footer {
+.proj-img {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
     width: 100%;
-    margin-bottom: 0;
+    aspect-ratio: 3/2;
+    margin-bottom: 20px;
 }
 
-footer h3 {
-    width: 40%;
-    color: var(--light);
+.proj-img img {
+    width: 90%;
+    border-radius: 0;
+    border: none;
+}
+
+.proj-desc {
+    width: 100%;
+    border: 3px solid rgba(255,255,255,0.8);
+}
+
+.proj-desc ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.proj-desc li {
+    padding: 10px;
+    font-weight: 400;
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: auto;
+    margin-bottom: 20px;
     text-align: center;
-    padding-bottom: 40px;
-    padding: 0 5px;
-    line-height: 300%;
-    background-color: var(--highlight);
-    box-shadow: 0px 6px 6px rgba(1, 22, 30, 0.25);
+    background-color: rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
+    border-top: 1px solid #ffffff;
 }
 
-
-/* Shift everything to a single column if on a tablet or smaller */
-
-@media screen and (max-width: 768px) {
-    header h1,
-    nav {
-        width: 100%;
-        text-align: center;
-    }
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    nav ul li {
-        box-shadow: 0px 3px 3px rgba(1, 22, 30, 0.1);
-        width: 100%;
-        text-align: center;
-    }
-    nav ul li a {
-        display: block;
-        border-bottom: 1px;
-    }
-    .container {
-        display: flex;
-        flex-direction: column;
-    }
-    h2 {
-        text-align: center;
-    }
-    article {
-        padding-top: 2em;
-    }
-    .about article {
-        flex-direction: column-reverse;
-        align-items: center;
-        justify-content: center;
-    }
-    .about article p {
-        flex-basis: 100%;
-    }
-    .projects {
-        background-color: var(--highlight);
-        box-shadow: 0 5px 5px gray;
-        color: var(--light);
-    }
-    .flexBox {
-        align-items: center;
-        justify-content: center;
-    }
-    .card {
-        flex: 0 1 90%;
-    }
+footer h4 {
+    line-height: 2em;
 }
