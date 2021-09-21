@@ -176,6 +176,7 @@ nav .row {
     z-index: 999;
     margin-left: auto;
     margin-right: 20px;
+    color: #364958;
 }
 
 
@@ -407,6 +408,31 @@ nav .row {
 
 .proj-links a:visited, .proj-links a:focus, .proj-links a:active {
     color: #FFFFFF;
+}
+
+/* CONNECT SECTION */
+
+.connect-section {
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+.connect-intro {
+    margin-bottom: 20px;
+}
+
+.social-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+}
+
+.social-card h2 {
+    text-align: center;
+    font-size: 1.5em;
 }
 
 /* FOOTER */
