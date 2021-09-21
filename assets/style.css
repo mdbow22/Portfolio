@@ -18,9 +18,9 @@ body {
     display: flex;
         flex-direction: column;
         justify-content: center;
-    background: #100B1D /*#18112C8*/;
+    background: #eeeeee /*#18112C8*/;
     font-family: 'Raleway',sans-serif;
-    color: #ffffff;
+    color: #000000;
 }
 
 /* GLOBAL STYLING HELP */
@@ -33,7 +33,7 @@ body {
 
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Montserrat', sans-serif;
-    color: #BeF0F0;
+    color: #3b6064;
 }
 
 h2 {
@@ -49,23 +49,29 @@ h2 {
 .container {
     position: relative;
     width: 100%;
-    max-width: 992px;
+    /* max-width: 992px; */
     height: 100%;
     min-height: 100vh;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    background: rgba(255,255,255,0.2);
 }
 
 /* Menu Toggle */
 
 .header {
-    background-color: rgba(255,255,255,0.3);
+    display: flex;
+    justify-content: center;
+    background-color: #364958 /*#21163b*/;
     backdrop-filter: blur(10px);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.8);
     margin-top: 20px;
-    border-top: 1px solid #ffffff;
+    /* border-top: 1px solid #ffffff; */
+}
+
+.margin-box {
+    width: 100%;
+    max-width: 900px;
 }
 
 .menu-btn {
@@ -75,7 +81,7 @@ h2 {
     font-size: 2em;
     border: none;
     background: transparent;
-    color: #ffffff;
+    color: #eeeeee;
     cursor: pointer;
     z-index: 998;
 }
@@ -90,6 +96,7 @@ h2 {
 
 .header ul li {
     font-size: 1.5em;
+    color: #eeeeee;
 }
 
 .off {
@@ -100,6 +107,7 @@ h2 {
     font-size: 3em;
     text-align: center;
     width: 100%;
+    color: #eeeeee;
 }
 
 /* NAVIGATION */
@@ -109,8 +117,8 @@ nav {
     height: 100vh;
     width: 100%;
     background-color: rgba(255,255,255,0.6);
-    color: #100B1D;
-    z-index: 3;
+    color: #364958;
+    z-index: 10;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -144,7 +152,7 @@ nav {
     bottom: 0;
     width: 0%;
     height: 100%;
-    background: linear-gradient(to top, rgba(255,255,255,0.4) 10%, transparent 80%);
+    background: linear-gradient(to top, rgba(201, 228, 202,0.4) 10%, transparent 80%);
     z-index: -1;
     transition: width 200ms ease-in;
 }
@@ -155,8 +163,8 @@ nav {
 
 nav .row {
     margin-top: 20px;
-    margin-left: auto;
-    margin-right: 20px;
+    width: 100%;
+    max-width: 900px;
 }
 
 .exit-btn {
@@ -166,14 +174,18 @@ nav .row {
     background: transparent;
     cursor: pointer;
     z-index: 999;
+    margin-left: auto;
+    margin-right: 20px;
 }
 
 
 /* MAIN CONTENT */
 
 .content-box {
-    width: 90%;
+    width: 100%;
+    max-width: 900px;
     margin: 60px auto;
+    padding: 0 20px;
 }
 
 /* LANDING PAGE */
@@ -197,7 +209,7 @@ nav .row {
 }
 
 .me-text h3 {
-    color: #ffffff;
+    color: #000000;
 }
 
 .home-section h3 {
@@ -209,15 +221,15 @@ nav .row {
 }
 
 .profile-pic {
-    width: 180px;
+    width: 250px;
     aspect-ratio: 1/1;
     margin-bottom: 50px;
 }
 
-img {
+.profile-pic img {
     width: inherit;
     border-radius: 50%;
-    border: 4px solid #FFFFFF;
+    border: 4px solid #364958;
 }
 
 .home-buttons {
@@ -228,12 +240,13 @@ img {
 }
 
 .home-btn {
+    border-radius: 15px;
     position: relative;
     background: transparent;
     padding: 10px;
-    border: 4px solid #BeF0F0;
+    border: 2px solid #364958;
     font-size: 2em;
-    color: #ffffff;
+    color: #364958;
     cursor: pointer;
     transition: all 300ms ease-in-out;
 }
@@ -241,17 +254,18 @@ img {
 .home-buttons .home-btn::before {
     content: '';
     position: absolute;
+    border-radius: 10px;
     left: 0;
     bottom: 0;
     width: 0%;
     height: 100%;
     transition: width 200ms ease-in-out;
-    background: #BEF0F0;
+    background: #364958;
     z-index: -1;
 }
 
 .home-btn:hover {
-    color: #100B1D;
+    color: #eeeeee;
 }
 
 .home-btn:hover::before {
@@ -271,6 +285,7 @@ img {
 
 .about-section p {
     line-height: 1.5em;
+    vertical-align: center;
 }
 
 .skills-list {
@@ -282,7 +297,8 @@ img {
 .skills-list li {
     margin: 15px;
     padding: 10px;
-    border: 4px solid #ffffff;
+    border: 4px solid #364958;
+    color: #364958;
     font-weight: 400;
 }
 
@@ -292,7 +308,7 @@ img {
 
 .resume-list h4 {
     line-height: 2em;
-    color: #ffffff;
+    color: #364958;
 }
 
 .resume-list li {
@@ -311,10 +327,11 @@ img {
 .proj-card {
     display: flex;
     flex-direction: column;
-    border-top: 1px solid #ffffff;
-    border-left: 1px solid #ffffff;
-    box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
-    background: rgba(255,255,255,0.3);
+    /* border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff; */
+    /* box-shadow: 4px 4px 6px rgba(0,0,0,0.5); */
+    background: #ffffff;
+    /* border-radius: 15px; */
     padding: 10px;
 }
 
@@ -334,19 +351,21 @@ img {
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding: 5%;
     aspect-ratio: 3/2;
     margin-bottom: 20px;
+    position: relative;
 }
 
 .proj-img img {
-    width: 90%;
+    border: 4px solid #364958;
+    width: 100%;
     border-radius: 0;
-    border: none;
 }
 
 .proj-desc {
     width: 100%;
-    border: 3px solid rgba(255,255,255,0.8);
+    border-top: 2px solid #364958;
 }
 
 .proj-desc ul {
@@ -357,8 +376,37 @@ img {
 }
 
 .proj-desc li {
-    padding: 10px;
+    padding: 20px;
     font-weight: 400;
+}
+
+.proj-links {
+    position: absolute;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    bottom: 15%;
+    left: 5%;
+    width: calc(90% - 1px);
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    z-index: 5;
+    background: #364958;
+}
+
+.proj-links a {
+    position: relative;
+    background: transparent;
+    padding: 5px;
+    font-size: 1.25em;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: all 300ms ease-in-out;
+}
+
+.proj-links a:visited, .proj-links a:focus, .proj-links a:active {
+    color: #FFFFFF;
 }
 
 /* FOOTER */
@@ -367,12 +415,13 @@ footer {
     margin-top: auto;
     margin-bottom: 20px;
     text-align: center;
-    background-color: rgba(255,255,255,0.3);
+    background-color: #364958;
     backdrop-filter: blur(10px);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
-    border-top: 1px solid #ffffff;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.8);
+    /* border-top: 1px solid #ffffff; */
 }
 
 footer h4 {
-    line-height: 2em;
+    line-height: 2.5em;
+    color: #eeeeee;
 }
