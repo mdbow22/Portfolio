@@ -42,6 +42,10 @@ h2 {
     
 }
 
+a, a:visited {
+    color: white;
+}
+
 /******************
 /* MAIN CONTAINER *
 *******************/
@@ -289,6 +293,46 @@ nav .row {
     vertical-align: center;
 }
 
+.resume {
+    margin-top: 40px;
+    color: #364958;
+}
+
+.resume-button {
+    position: relative;
+    padding: 10px;
+    background: transparent;
+    border: 2px solid #364958;
+    color: #364958;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    text-decoration: none;
+}
+
+.resume a, .resume a:visited {
+    color: #364958;
+}
+
+.resume-button::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 100%;
+    transition: width 200ms ease-in-out;
+    background: #364958;
+    z-index: -1;
+}
+
+.resume a:hover {
+    color: #eeeeee;
+}
+
+.resume-button:hover::before {
+    width: 100%;
+}
+
 .skills-list {
     display: flex;
     flex-wrap: wrap;
@@ -298,7 +342,7 @@ nav .row {
 .skills-list li {
     margin: 15px;
     padding: 10px;
-    border: 4px solid #364958;
+    border: 2px solid #364958;
     color: #364958;
     font-weight: 400;
 }

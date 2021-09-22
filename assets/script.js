@@ -85,3 +85,10 @@ homeBtns[0].addEventListener('click',() => {
     home.classList.add('hidden');
     hello.classList.add('hidden');
 });
+
+homeBtns[1].addEventListener('click',() => {
+    connect.classList.remove('hidden');
+    connection.classList.remove('hidden');
+    home.classList.add('hidden');
+    hello.classList.add('hidden');
+});
